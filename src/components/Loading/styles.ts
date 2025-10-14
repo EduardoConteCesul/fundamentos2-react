@@ -4,9 +4,9 @@ export const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_100}
+  background-color: ${({ theme }) => theme.COLORS.GRAY_100};
 `;
 export const LoadIndicator = styled.ActivityIndicator.attrs(({ theme }) => ({
-  color: theme.COLORS.RED_DARK,
+  color: theme.COLORS.GRAY_700,
   size: "large"
 }))``;
