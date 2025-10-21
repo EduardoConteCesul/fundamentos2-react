@@ -1,12 +1,16 @@
-import { Text } from "react-native";
+import { Text, TouchableOpacityProps } from "react-native";
 import { Container, Icon } from "./styles";
 
-export function TeamCard() {
+type Props = TouchableOpacityProps & {
+  title: string;
+}
+
+export function TeamCard({ title, ...rest }: Props) {
   return (
-    <Container>
+    <Container {...rest}>
       <Icon name="groups" size={32}/>
       
-      <Text>Equipe 1</Text>
+      <Text>{title}</Text>
     </Container>
   )
 }
