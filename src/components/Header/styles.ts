@@ -19,6 +19,6 @@ export const BackButton = styled.TouchableOpacity`
 
 export const BackIcon = styled(MaterialIcons).attrs(({ theme }) => ({
   size: 32,
-  color: theme.COLORS.GRAY_700,
+  color: theme.COLORS.WHITE,
 }))``;
 

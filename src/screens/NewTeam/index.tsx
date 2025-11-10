@@ -9,7 +9,7 @@ export function NewTeam() {
   return (
     <Container>
       <HeaderContainer>
-        <Header />
+        <Header showBackButton />
 
         <Highlight
           title="Nova Equipe"
