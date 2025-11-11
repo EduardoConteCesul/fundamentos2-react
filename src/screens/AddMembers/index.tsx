@@ -38,10 +38,7 @@ export function AddMembers() {
 
           <ButtonIcon
             icon='add-circle-outline'
-            style={{
-              borderBottomLeftRadius: 0,  
-              borderTopLeftRadius: 0
-            }}
+            borderRadius='RIGHT'
           />
         </InputContainer>
 
