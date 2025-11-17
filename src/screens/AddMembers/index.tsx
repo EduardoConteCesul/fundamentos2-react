@@ -8,11 +8,14 @@ import { Tab } from '@components/Tab';
 import { FlatList } from 'react-native';
 import { useState } from 'react';
 import { Tag } from '@components/Tag';
+import { MemberCard } from '@components/MemberCard';
+import { ListEmpty } from '@components/ListEmpty';
 
 
 export function AddMembers() {
 
   const [tab, setTab] = useState('Titular');
+  const [members, setMembers] = useState(["Eduardo", "Conte"]);
 
   return (
     <Container>
@@ -57,6 +60,19 @@ export function AddMembers() {
           />
           <Tag text={0} />
         </Tabs>
+
+          <FlatList
+            data={members}
+            keyExtractor={item => item}
+            renderItem={( item ) => (
+              <MemberCard name={item.item} onRemove={() => console.log()} />
+            )}
+            ListEmptyComponent={() => (
+              <ListEmpty message='Não ha membros adicionados' />
+            )}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={[{ paddingBottom: 100 }, members.length === 0 && { flex: 1 }]}
+          />
 
         <Button
           type='SECONDARY'
