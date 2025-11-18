@@ -7,14 +7,13 @@ export const Container = styled.View`
 
 export const HeaderContainer = styled.View`
   background-color: ${({ theme }) => theme.COLORS.PURPLE_500};
-  padding-top: 54px;
-  padding-bottom: 24px;
+  padding: 24px 0;
 `;
 
 export const Content = styled.View`
   flex: 1;
   justify-content: space-between;
-  padding: 24px;
+  padding: 24px 24px 0 24px;
 `;
 
 export const InputContainer = styled.View`

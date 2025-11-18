@@ -10,21 +10,31 @@ import { useState } from 'react';
 import { Tag } from '@components/Tag';
 import { MemberCard } from '@components/MemberCard';
 import { ListEmpty } from '@components/ListEmpty';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useRoute } from '@react-navigation/native';
 
+type RouteParams = {
+  team: string;
+}
 
 export function AddMembers() {
 
   const [tab, setTab] = useState('Titular');
   const [members, setMembers] = useState(["Eduardo", "Conte"]);
 
+  const route = useRoute();
+  const { team } = route.params as RouteParams;
+
+  const insets = useSafeAreaInsets();
+
   return (
-    <Container>
-      <HeaderContainer>
+    <Container style={{ paddingBottom: insets.bottom }}>
+      <HeaderContainer style={{ paddingTop: insets.top }}>
         <Header showBackButton/>
 
         <Highlight
-          title='Equipes'
-          subtitle='Preparem suas equipes'
+          title={team}
+          subtitle='Adicione os titulares e reservas'
         />
       </HeaderContainer>
 
