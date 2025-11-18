@@ -1,6 +1,6 @@
 import { Loadind } from "@components/Loading";
 import { Roboto_400Regular, Roboto_700Bold, useFonts } from "@expo-google-fonts/roboto";
-import { AddMembers } from "@screens/AddMembers";
+import { Routes } from "@routes/index";
 import theme from "@theme/index";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components/native";
@@ -15,7 +15,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoadead ? <AddMembers /> : <Loadind />}
+      {fontsLoadead ? <Routes /> : <Loadind />}
     </ThemeProvider>
   );
 } 
